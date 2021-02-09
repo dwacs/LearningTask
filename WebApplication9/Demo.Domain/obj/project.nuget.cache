@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/NqzmB3iYdABdRIoVGLYJ77wRYy6rJ/Rv0olVWu65E1tOaTtKdIjklo62J+IoQfTnRBg7LuY8TFHEdiQCUJP+g==",
+  "success": true,
+  "projectFilePath": "D:\\Qixiang_xu\\internship\\LoginAppV1\\WebApplication9\\Demo.Domain\\Demo.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gigabyte\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\gigabyte\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

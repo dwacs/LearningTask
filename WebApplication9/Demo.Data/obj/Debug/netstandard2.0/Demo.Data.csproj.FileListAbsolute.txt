@@ -1,0 +1,12 @@
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\bin\Debug\netstandard2.0\Demo.Domain.dll
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\obj\Debug\netstandard2.0\Demo.Data.csprojAssemblyReference.cache
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\obj\Debug\netstandard2.0\Demo.Data.AssemblyInfoInputs.cache
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\obj\Debug\netstandard2.0\Demo.Data.AssemblyInfo.cs
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\bin\Debug\netstandard2.0\Demo.Data.deps.json
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\bin\Debug\netstandard2.0\Demo.Data.dll
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\bin\Debug\netstandard2.0\Demo.Data.pdb
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\bin\Debug\netstandard2.0\Demo.Domain.pdb
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\obj\Debug\netstandard2.0\Demo.Data.csproj.CoreCompileInputs.cache
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\obj\Debug\netstandard2.0\Demo.Data.csproj.CopyComplete
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\obj\Debug\netstandard2.0\Demo.Data.dll
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Data\obj\Debug\netstandard2.0\Demo.Data.pdb
