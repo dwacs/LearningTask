@@ -1,0 +1,40 @@
+﻿<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+@model IEnumerable<UserViewModel> // 数据类型是IEnumerable
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>学生列表</h1>
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>UserName</th>
+                <th>RegDate</th>
+                <th>Access</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.UserName</td>
+                    <td>@item.Age</td>
+                    <td>
+                        <a class="btn btn-warning" asp-action="Edit" asp-route-Id="@item.Id">编辑</a>
+                        @*<a class="btn btn-danger">删除</a>*@
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
+<a asp-action="Add" class="btn btn-primary">Add new User</a>
