@@ -37,3 +37,5 @@ D:\Qixiang_xu\internship\LoginAppV1\WebApplication8\WebApplication8\obj\Debug\ne
 D:\Qixiang_xu\internship\LoginAppV1\WebApplication8\WebApplication8\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.cshtml.g.cs
 D:\Qixiang_xu\internship\LoginAppV1\WebApplication8\WebApplication8\obj\Debug\netcoreapp2.2\Razor\Views\UserAccount\Add.cshtml.g.cs
 D:\Qixiang_xu\internship\LoginAppV1\WebApplication8\WebApplication8\obj\Debug\netcoreapp2.2\Razor\Views\UserAccount\Index.cshtml.g.cs
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication8\WebApplication8\obj\Debug\netcoreapp2.2\Razor\Views\Role\Add.cshtml.g.cs
+D:\Qixiang_xu\internship\LoginAppV1\WebApplication8\WebApplication8\obj\Debug\netcoreapp2.2\Razor\Views\Role\Index.cshtml.g.cs
