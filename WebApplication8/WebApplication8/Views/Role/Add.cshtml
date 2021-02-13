@@ -1,6 +1,6 @@
-﻿@{
+﻿@model RoleViewModel
+@{
     ViewData["Title"] = "Add";
-    var users = ViewBag.Users as List<ApplicationUser>;
 }
 
 <h1>添加角色</h1>
@@ -8,15 +8,7 @@
     <input type="hidden" name="Type" value="@ViewBag.Type" />
     @if (ViewBag.Type == "Edit")
     {
-        <hr />
-        <h2>角色用户</h2>
-        <ul>
-            @foreach (var u in users)
-            {
-                <li>@u.UserName</li>
-            }
-        </ul>
-        <a asp-action="AddRoleToUser" class="btn btn-primary" asp-route-roleId="@Model.Id">为角色添加用户</a>
+        <input type="hidden" asp-for="Id" />
     }
     <div class="form-group row">
         <label class="col-sm-2 col-form-label" asp-for="Name"></label>

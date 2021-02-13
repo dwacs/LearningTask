@@ -31,9 +31,6 @@ namespace WebApplication8.Controllers
         {
             ViewBag.Type = "Edit";
             var model = await roleManager.FindByIdAsync(Id);
-            // 获取角色的所有用户
-            var users = await userManager.GetUsersInRoleAsync(model.Name);
-            ViewBag.Users = users;
             return View(nameof(Add), new RoleViewModel
             {
                 Id = model.Id,
@@ -52,7 +49,7 @@ namespace WebApplication8.Controllers
             var type = Request.Form["Type"];
             if (type == "Add")
             {
-                var result = await roleManager.CreateAsync(new IdentityRole
+                var result = await roleManager.CreateAsync(new IdentityRole        //创建角色
                 {
                     Name = vm.Name
                 });
@@ -67,7 +64,7 @@ namespace WebApplication8.Controllers
             }
             else
             {
-                var model = await roleManager.FindByIdAsync(vm.Id);
+                var model = await roleManager.FindByIdAsync(vm.Id);        //根据id查询角色
                 if (model == null)
                 {
                     ModelState.AddModelError(string.Empty, "角色不存在！");
