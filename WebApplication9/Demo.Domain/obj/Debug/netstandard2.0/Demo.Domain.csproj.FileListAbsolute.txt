@@ -1,9 +1,0 @@
-D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Domain\bin\Debug\netstandard2.0\Demo.Domain.deps.json
-D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Domain\bin\Debug\netstandard2.0\Demo.Domain.dll
-D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Domain\bin\Debug\netstandard2.0\Demo.Domain.pdb
-D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Domain\obj\Debug\netstandard2.0\Demo.Domain.csprojAssemblyReference.cache
-D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Domain\obj\Debug\netstandard2.0\Demo.Domain.AssemblyInfoInputs.cache
-D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Domain\obj\Debug\netstandard2.0\Demo.Domain.AssemblyInfo.cs
-D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Domain\obj\Debug\netstandard2.0\Demo.Domain.csproj.CoreCompileInputs.cache
-D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Domain\obj\Debug\netstandard2.0\Demo.Domain.dll
-D:\Qixiang_xu\internship\LoginAppV1\WebApplication9\Demo.Domain\obj\Debug\netstandard2.0\Demo.Domain.pdb
