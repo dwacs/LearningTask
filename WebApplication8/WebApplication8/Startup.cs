@@ -52,6 +52,14 @@ namespace WebApplication8
                 options.Password.RequiredUniqueChars = 1; // 唯一字符的数目
             }).AddEntityFrameworkStores<ApplicationUserDbContext>();
             services.AddSingleton<IRepository<User>, UserMemoryRepository>();
+
+            services.AddAuthorization(options =>
+            {
+                // Admin是这条授权策略的名字，第二个参数是具体策略，RequireRole的参数类型是params string[]
+                options.AddPolicy("Admin", policy => policy.RequireClaim("Administrator"));
+                // 写法同Role差不多相同
+                options.AddPolicy("Visitor", policy => policy.RequireClaim("NormalUser"));
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

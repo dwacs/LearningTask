@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplication8.Models;
 
+[Authorize(Policy = "Admin")]
 public class UserAccountController : Controller
 {
     // UserManager 类需要引用 Microsoft.AspNetCore.Identity;
@@ -33,6 +35,9 @@ public class UserAccountController : Controller
     {
         ViewBag.Type = "Edit";
         var model = await userManager.FindByIdAsync(Id);
+
+        var claims = await userManager.GetClaimsAsync(model);
+        ViewBag.Claims = claims;  //using claim
         return View(nameof(Add), new AccountViewModel
         {
             Id = model.Id,
@@ -96,4 +101,63 @@ public class UserAccountController : Controller
         }
         return View(vm);
     }
+
+
+    public async Task<IActionResult> AddClaimsToUser(string userId)
+    {
+        var user = await userManager.FindByIdAsync(userId);
+        if (user == null)
+        {
+            return Content("用户不存在！");
+        }
+
+        var userClaims = await userManager.GetClaimsAsync(user);
+        var claims = Enum.GetValues(typeof(AuthClaimEnum));
+        var claimList = new List<string>();
+        foreach (var c in claims)
+        {
+            if (userClaims.Count(x => x.Value.Equals(c.ToString())) <= 0)
+            {
+                claimList.Add(c.ToString());
+            }
+        }
+
+        var vm = new AccountClaimsViewModel
+        {
+            UserId = userId,
+            Claims = claimList
+        };
+        return View(vm);
+    }
+    [HttpPost]
+    public async Task<IActionResult> AddClaimsToUser(AccountClaimsViewModel vm)
+    {
+        if (!ModelState.IsValid)
+        {
+            ModelState.AddModelError(string.Empty, "数据异常！");
+            return View();
+        }
+        var user = await userManager.FindByIdAsync(vm.UserId);
+        if (user == null)
+        {
+            ModelState.AddModelError(string.Empty, "用户不存在！");
+            return View();
+        }
+        user.Claims.Add(new IdentityUserClaim<string>
+        {
+            ClaimType = vm.UserClaim,
+            ClaimValue = vm.UserClaim
+        });
+        var result = await userManager.UpdateAsync(user);
+        if (result.Succeeded)
+        {
+            return RedirectToAction(nameof(Edit), new { Id = vm.UserId });
+        }
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError(string.Empty, error.Description);
+        }
+        return View(vm);
+    }
+
 }

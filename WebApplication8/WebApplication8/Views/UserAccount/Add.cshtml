@@ -2,6 +2,7 @@
 @model AccountViewModel
 @{
     ViewData["Title"] = "Add";
+    var claims = ViewBag.Claims as List<System.Security.Claims.Claim>;
 }
 
 <h1>添加或编辑用户</h1>
@@ -9,7 +10,16 @@
     <input type="hidden" name="Type" value="@ViewBag.Type" />
     @if (ViewBag.Type == "Edit")
     {
-        <input type="hidden" asp-for="Id" />
+        /*<input type="hidden" asp-for="Id" />*/
+        <hr />
+        <h2>用户Claims</h2>
+        <ul>
+            @foreach (var c in claims)
+            {
+                <li>@c.Value</li>
+            }
+        </ul>
+        <a asp-action="AddClaimsToUser" asp-route-userId="@Model.Id" class="btn btn-primary">为用户添加Claims</a>
     }
     <div class="form-group row">
         <label asp-for="UserName" class="col-sm-2 col-form-label"></label>
@@ -39,6 +49,6 @@
         </div>
         <span asp-validation-for="NickName"></span>
     </div>
-   
+
     <button type="submit" class="btn-primary">提交</button>
 </form>
